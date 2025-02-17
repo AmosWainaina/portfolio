@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/ab71cfecb1.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+              <img src="Images/logo.png" alt="logo" class="logo">
+                <ul>
+                   <li><a href="#">Home</a></li> 
+                   <li><a href="#">About</a></li> 
+                   <li><a href="#">services</a></li> 
+                   <li><a href="#">portfolio</a></li> 
+                   <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <br><span>Amos Wainaina</span> </h1>
+            </div>    
+        </div>
+    </div>
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="About-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Enthusiastic and detail-oriented Junior Developer
+                         with a strong foundation in Python, JavaScript,
+                         SQL, MongoDB, and React. Passionate about developing 
+                         efficient and scalable applications while continuously 
+                         learning and improving coding skills. Eager to contribute to 
+                         a dynamic development team and grow as a software engineer.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(Skills)">Skills</p>
+                       
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web interfaces</li>
+                            <li><span>Frontend</span><br>Building Web Applications</li>
+                            <li><span>Backend</span><br>Building Web APIs</li>
+                            <li><span>Database</span><br>Managing Data</li>
+
+                        </ul>
+                    </div>
+                       
+                    </div> 
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    
+
+    <!---------services------>
+    <div class="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Development</h2>
+                        <p>Building responsive and user-friendly web applications</p>
+                        <a href="#">learn more</a>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>UI/UX</h2>
+                        <p>Designing and improving user experience</p>
+                        <a href="#">learn more</a>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-database"></i>
+                        <h2>DataBase</h2>
+                        <p>Managing and storing data</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    
+    <!---------portfolio------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list overlay">
+                <div class="work">
+                    <img src="Images/istockphoto-1338894509-1024x1024.jpg" alt="">
+                    <div class="layer">
+                        <h3>E-Commerce Website</h3>
+                        <p>This responsive and user-friendly web application lets one shop from anywhere
+                            and get their products picked and delivered at their doorstep</p>
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/AmosWainaina/Cloth-Store" class="btn">see more</a>
+        </div>
+    </div>
+
+    
+    <!---------contact------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Get in touch</h1>
+                    <p> <i class="fa-regular fa-envelope"></i>toxicamos99@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i>+254711656218</p>
+                    <p> <i class="fa-solid fa-location-dot"></i> Nairobi, Kenya</p>
+
+                    <div class="social-icons">
+                        <a href="https://x.com/Toxic254Toxic"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/toxicchokeofficial?igsh=MWR1d25qamw0amppaw=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amos-wainaina-82852129b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/AmosWainaina?tab=overview&from=2025-01-01&to=2025-01-31"><i class="fa-brands fa-github"></i></a>
+
+                    </div>
+                    <a href="Images/Resume.pdf" download class="btn">Download Resume</a>
+                    
+                </div>
+                <div class="contact-right"></div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> <i class="fa-regular fa-copyright"></i>Copyright @ Amos Wainaina</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link")
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab")
+            }
+            event.target.classlist.add("active-link");
+            document.getElementById(tabname).classlist.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
