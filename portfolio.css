@@ -73,6 +73,7 @@ nav ul li a:hover::after{
 #About-col-1{
     margin-top: 20%;
     font-size: 10px;
+    
 
 }
 
@@ -127,6 +128,8 @@ nav ul li a:hover::after{
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    width: 90%;
+    margin: 40px auto;
     grid-gap: 40px;
     margin-top:50px;
 }
@@ -270,6 +273,8 @@ nav ul li a:hover::after{
 
 .contact-left{
     flex-basis: 60%;
+    width: 90%;
+    margin: 40px auto;
 }
 .contact-left p{
     margin-top: 30px;
