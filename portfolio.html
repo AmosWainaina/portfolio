@@ -1,167 +1,294 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal portfolio</title>
+    <title>Amos Wainaina - Full Stack Developer</title>
     <link rel="stylesheet" href="portfolio.css">
     <script src="https://kit.fontawesome.com/ab71cfecb1.js" crossorigin="anonymous"></script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Section -->
     <div id="header">
         <div class="container">
             <nav>
-              <img src="Images/logo.png" alt="logo" class="logo">
-                <ul>
-                   <li><a href="#">Home</a></li> 
-                   <li><a href="#">About</a></li> 
-                   <li><a href="#">services</a></li> 
-                   <li><a href="#">portfolio</a></li> 
-                   <li><a href="#">Contact</a></li>
+                <img src="Images/logo.png" alt="logo" class="logo">
+                <ul id="sidemenu">
+                   <li><a href="#header">Home</a></li> 
+                   <li><a href="#About">About</a></li> 
+                   <li><a href="#services">Services</a></li> 
+                   <li><a href="#portfolio">Portfolio</a></li> 
+                   <li><a href="#contact">Contact</a></li>
+                   <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Web Developer</p>
-                <h1>Hi, I'm <br><span>Amos Wainaina</span> </h1>
-            </div>    
+                <p class="typing-animation">Full Stack Developer</p>
+                <h1>Hi, I'm <br><span class="gradient-text">Amos Wainaina</span></h1>
+                <p class="header-description">Crafting digital experiences with passion and precision</p>
+                <div class="header-buttons">
+                    <a href="#contact" class="btn-primary">Get In Touch</a>
+                    <a href="Images/Resume.pdf" download class="btn-secondary">Download CV</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
         </div>
     </div>
+
+    <!-- About Section -->
     <div id="About">
         <div class="container">
             <div class="row">
-                <div class="About-col-1">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        Enthusiastic and detail-oriented Junior Developer
-                         with a strong foundation in Python, JavaScript,
-                         SQL, MongoDB, and React. Passionate about developing 
-                         efficient and scalable applications while continuously 
-                         learning and improving coding skills. Eager to contribute to 
-                         a dynamic development team and grow as a software engineer.
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab(Skills)">Skills</p>
-                       
+                <div class="about-col-1">
+                    <div class="about-img">
+                        <img src="Images/IMG_20240113_164119_148.jpg" alt="Amos Wainaina">
+                        <div class="about-img-overlay"></div>
                     </div>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-description">
+                        Enthusiastic and detail-oriented <span class="highlight">Junior Developer</span>
+                        with a strong foundation in Python, JavaScript, SQL, MongoDB, and React. 
+                        Passionate about developing efficient and scalable applications while continuously 
+                        learning and improving coding skills. Eager to contribute to 
+                        a dynamic development team and grow as a software engineer.
+                    </p>
+                    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>2+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5+</h3>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    
                     <div class="tab-contents active-tab" id="Skills">
                         <ul>
-                            <li><span>UI?UX</span><br>Designing Web interfaces</li>
-                            <li><span>Frontend</span><br>Building Web Applications</li>
-                            <li><span>Backend</span><br>Building Web APIs</li>
-                            <li><span>Database</span><br>Managing Data</li>
-
+                            <li><span>UI/UX</span><br>Designing intuitive and beautiful web interfaces</li>
+                            <li><span>Frontend</span><br>Building responsive web applications with React & JavaScript</li>
+                            <li><span>Backend</span><br>Developing robust APIs with Python and Node.js</li>
+                            <li><span>Database</span><br>Managing data with SQL, MongoDB, and PostgreSQL</li>
                         </ul>
                     </div>
-                       
-                    </div> 
+                    
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023-Present</span><br>Freelance Full Stack Developer</li>
+                            <li><span>2022-2023</span><br>Junior Web Developer Intern</li>
+                            <li><span>2022</span><br>Frontend Developer - Personal Projects</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2024</span><br>Full Stack Development Bootcamp</li>
+                            <li><span>2023</span><br>Computer Science Fundamentals</li>
+                            <li><span>2022</span><br>Web Development Certification</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
-    
-    
 
-    <!---------services------>
-    <div class="services">
+    <!-- Services Section -->
+    <div id="services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
-                <div class="services-list">
-                    <div>
+            <p class="section-description">What I can do for you</p>
+            <div class="services-list">
+                <div class="service-card">
+                    <div class="service-icon">
                         <i class="fa-solid fa-code"></i>
-                        <h2>Web Development</h2>
-                        <p>Building responsive and user-friendly web applications</p>
-                        <a href="#">learn more</a>
                     </div>
-
-                    <div>
-                        <i class="fa-solid fa-crop"></i>
-                        <h2>UI/UX</h2>
-                        <p>Designing and improving user experience</p>
-                        <a href="#">learn more</a>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-database"></i>
-                        <h2>DataBase</h2>
-                        <p>Managing and storing data</p>
-                        <a href="#">learn more</a>
-                    </div>
+                    <h2>Web Development</h2>
+                    <p>Building responsive and user-friendly web applications using modern technologies like React, JavaScript, and Python.</p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>Modern Frameworks</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started</a>
                 </div>
+
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-crop"></i>
+                    </div>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing and improving user experience with intuitive interfaces that convert visitors into customers.</p>
+                    <ul class="service-features">
+                        <li>User Research</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h2>Database Management</h2>
+                    <p>Managing and storing data efficiently with proper database design, optimization, and security measures.</p>
+                    <ul class="service-features">
+                        <li>Database Design</li>
+                        <li>Query Optimization</li>
+                        <li>Data Security</li>
+                    </ul>
+                    <a href="#contact" class="service-btn">Get Started</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    
-    <!---------portfolio------>
+    <!-- Portfolio Section -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My work</h1>
-            <div class="work-list overlay">
+            <h1 class="sub-title">My Work</h1>
+            <p class="section-description">Recent projects I've worked on</p>
+            <div class="work-list">
                 <div class="work">
-                    <img src="Images/istockphoto-1338894509-1024x1024.jpg" alt="">
+                    <img src="Images/istockphoto-1338894509-1024x1024.jpg" alt="E-Commerce Website">
                     <div class="layer">
-                        <h3>E-Commerce Website</h3>
-                        <p>This responsive and user-friendly web application lets one shop from anywhere
-                            and get their products picked and delivered at their doorstep</p>
-                        </p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <h3>E-Commerce Platform</h3>
+                        <p>A responsive and user-friendly web application that lets customers shop from anywhere and get their products picked and delivered at their doorstep.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AmosWainaina/Cloth-Store" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Task Management App">
+                    <div class="layer">
+                        <h3>Task Management App</h3>
+                        <p>A productivity application that helps teams organize, track, and manage their projects efficiently with real-time collaboration features.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-solid fa-external-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work">
+                    <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Weather Dashboard">
+                    <div class="layer">
+                        <h3>Weather Dashboard</h3>
+                        <p>A beautiful weather application that provides real-time weather information with interactive charts and location-based forecasts.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>API Integration</span>
+                            <span>Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-solid fa-external-link"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <a href="https://github.com/AmosWainaina/Cloth-Store" class="btn">see more</a>
+            <a href="https://github.com/AmosWainaina" target="_blank" class="btn">View All Projects</a>
         </div>
     </div>
 
-    
-    <!---------contact------>
+    <!-- Contact Section -->
     <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Get in touch</h1>
-                    <p> <i class="fa-regular fa-envelope"></i>toxicamos99@gmail.com</p>
-                    <p> <i class="fa-solid fa-phone"></i>+254711656218</p>
-                    <p> <i class="fa-solid fa-location-dot"></i> Nairobi, Kenya</p>
+                    <h1 class="sub-title">Get In Touch</h1>
+                    <p class="contact-description">Let's discuss your next project</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>toxicamos99@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+254711656218</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="social-icons">
-                        <a href="https://x.com/Toxic254Toxic"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.instagram.com/toxicchokeofficial?igsh=MWR1d25qamw0amppaw=="><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/amos-wainaina-82852129b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/AmosWainaina?tab=overview&from=2025-01-01&to=2025-01-31"><i class="fa-brands fa-github"></i></a>
-
+                        <a href="https://x.com/Toxic254Toxic" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/toxicchokeofficial?igsh=MWR1d25qamw0amppaw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amos-wainaina-82852129b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/AmosWainaina?tab=overview&from=2025-01-01&to=2025-01-31" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <a href="Images/Resume.pdf" download class="btn">Download Resume</a>
                     
+                    <a href="Images/Resume.pdf" download class="btn download-btn">
+                        <i class="fa-solid fa-download"></i>
+                        Download Resume
+                    </a>
                 </div>
-                <div class="contact-right"></div>
+                
+                <div class="contact-right">
+                    <form class="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn-submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
+        
         <div class="copyright">
-            <p> <i class="fa-regular fa-copyright"></i>Copyright @ Amos Wainaina</p>
+            <p><i class="fa-regular fa-copyright"></i> 2024 Amos Wainaina. All rights reserved.</p>
         </div>
     </div>
 
-
-
-
-
-
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classlist.remove("active-link")
-            }
-
-            for(tabcontent of tabcontents){
-                tabcontent.classlist.remove("active-tab")
-            }
-            event.target.classlist.add("active-link");
-            document.getElementById(tabname).classlist.add("active-tab");
-        }
-    </script>
-
+    <script src="portfolio.js"></script>
 </body>
 </html>
