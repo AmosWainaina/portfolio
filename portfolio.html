@@ -1,21 +1,26 @@
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amos Wainaina - Full Stack Developer</title>
+    <meta name="description" content="Amos Wainaina - Full Stack Developer specializing in React, Python, and modern web technologies. View my portfolio and get in touch.">
+    <meta name="keywords" content="Full Stack Developer, React, Python, JavaScript, Web Development, Portfolio">
+    <meta name="author" content="Amos Wainaina">
     <link rel="stylesheet" href="portfolio.css">
     <script src="https://kit.fontawesome.com/ab71cfecb1.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Images/logo.png">
 </head>
 <body>
     <!-- Header Section -->
     <div id="header">
         <div class="container">
             <nav>
-                <img src="Images/logo.png" alt="logo" class="logo">
+                <img src="Images/logo.png" alt="Amos Wainaina Logo" class="logo">
                 <ul id="sidemenu">
                    <li><a href="#header">Home</a></li> 
                    <li><a href="#About">About</a></li> 
@@ -32,7 +37,7 @@
                 <p class="header-description">Crafting digital experiences with passion and precision</p>
                 <div class="header-buttons">
                     <a href="#contact" class="btn-primary">Get In Touch</a>
-                    <a href="Images/Resume (3).pdf" download class="btn-secondary">Download CV</a>
+                    <a href="Images/Resume%20(3).pdf" download="Amos_Wainaina_Resume.pdf" class="btn-secondary">Download CV</a>
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -72,7 +77,7 @@
                         </div>
                         <div class="stat-item">
                             <h3>1</h3>
-                            <p>Technologies</p>
+                            <p>Happy Clients</p>
                         </div>
                     </div>
 
@@ -246,18 +251,19 @@
                     
                     <a href="Images/Resume (3).pdf" download class="btn download-btn">
                         <i class="fa-solid fa-download"></i>
-                        Download Resume
+                        <span>Download Resume</span>
                     </a>
                 </div>
                 
                 <div class="contact-right">
-                    <form class="contact-form">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn-submit">
                             <i class="fa-solid fa-paper-plane"></i>
-                            Send Message
+                            <span>Send Message</span>
                         </button>
                     </form>
                 </div>
@@ -338,8 +344,8 @@
                 <div class="footer-bottom-content">
                     <p>&copy; 2025 Amos Wainaina. All rights reserved.</p>
                     <div class="footer-bottom-links">
-                        <a href="#" onclick="alert('Privacy Policy coming soon!')">Privacy Policy</a>
-                        <a href="#" onclick="alert('Terms of Service coming soon!')">Terms of Service</a>
+                        <a href="#" onclick="showComingSoon('Privacy Policy')">Privacy Policy</a>
+                        <a href="#" onclick="showComingSoon('Terms of Service')">Terms of Service</a>
                     </div>
                 </div>
             </div>

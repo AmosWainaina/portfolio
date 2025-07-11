@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "format": "prettier --write .",
+    "lint": "eslint *.js",
+    "validate": "npm run format && npm run lint"
   },
   "dependencies": {
     "express": "^4.18.2"

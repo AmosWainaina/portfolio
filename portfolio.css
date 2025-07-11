@@ -1256,3 +1256,92 @@ textarea:focus {
         --text-gray: #cccccc;
     }
 }
+
+/* Loading state */
+.loaded {
+    opacity: 1;
+}
+
+/* Revealed sections animation */
+.revealed {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Improved button accessibility */
+.btn-primary:focus,
+.btn-secondary:focus,
+.service-btn:focus,
+.btn-submit:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Tab accessibility improvements */
+.tab-links[role="tab"] {
+    cursor: pointer;
+}
+
+.tab-links[role="tab"]:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Improved form validation styles */
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+    border-color: #ff4444;
+}
+
+.contact-form input:valid,
+.contact-form textarea:valid {
+    border-color: #44ff44;
+}
+
+/* Performance optimization for animations */
+.service-card,
+.work,
+.stat-item,
+.contact-item {
+    will-change: transform, opacity;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .header-text {
+        animation: none;
+    }
+    
+    .scroll-indicator {
+        animation: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    nav,
+    .scroll-indicator,
+    .social-icons,
+    .contact-form,
+    .footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .gradient-text {
+        color: black;
+        -webkit-text-fill-color: black;
+    }
+}
