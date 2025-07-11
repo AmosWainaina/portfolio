@@ -407,3 +407,5 @@ window.addEventListener('error', function(e) {
 });
 
 window.addEventListener('unhandledrejection', function(e) {
+}
+)
