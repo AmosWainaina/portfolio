@@ -247,38 +247,6 @@ window.addEventListener('load', function() {
     }
 });
 
-// Improved intersection observer with error handling
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe elements for scroll animations with error handling
-document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.service-card, .work, .stat-item, .contact-item');
-    
-    animateElements.forEach(el => {
-        if (el) {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        }
-    });
-});
-
-// Remove duplicate contact form handling code
-// (Already handled above with improved version)
-
 // Add loading animation to external links with error handling
 document.querySelectorAll('a[target="_blank"]').forEach(link => {
     if (link) {
